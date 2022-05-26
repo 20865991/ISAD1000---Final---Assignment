@@ -2,15 +2,9 @@ import java.util.*;
 
 public class identifyNumbers 
 {
-    public static void main(String[] args)
+    public static String numberID (String numID)
     { 
-        Scanner sc = new Scanner(System.in);
-
-        String sample; 
-        System.out.println("Please enter a username with numbers");
-        sample = sc.nextLine();
-
-        char[] chars = sample.toCharArray();
+        char[] chars = numID.toCharArray();
         StringBuilder sb = new StringBuilder();
 
         for(char c : chars)
@@ -20,6 +14,9 @@ public class identifyNumbers
                 sb.append(c);
             }
         }
+        String nString = sb.toString();
         System.out.println(sb);
+
+        return nString;
     }
 }
