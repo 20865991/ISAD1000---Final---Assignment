@@ -3,7 +3,7 @@ import java.io.*;
 
 public class writeToFile 
 {    
-    private static void writeOneRow(String pFilename, int pID, String pName, double pAssign, double pTest, double pExam, double pOverall)
+    private static void writeOneRow(String pFilename, int pID, String pName)
     { 
         FileOutputStream fileStrm = null;
         PrintWriter pw;
@@ -11,7 +11,7 @@ public class writeToFile
         { 
             fileStrm = new FileOutputStream(pFilename);
             pw = new PrintWriter(fileStrm);
-            pw.println(pID + "," + pName + "," + pAssign + "," + pTest + "," + pExam + "," + pOverall);
+            pw.println(pID + "," + pName);
             pw.close();  
         }
         catch(IOException e)
