@@ -18,7 +18,6 @@ public class StringValidation
         else if (strNum != null)
         {
             System.out.println("this is a valid numerical string");
-        }
-//          
+        }        
     }
 }

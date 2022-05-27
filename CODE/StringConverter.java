@@ -1,4 +1,5 @@
 import java.util.*;
+import java.lang.*;
 
 public class StringConverter
 {
@@ -6,28 +7,20 @@ public class StringConverter
 		{
 			Scanner sc = new Scanner(System.in);
 			
+			System.out.println("Please enter u for uppercase conversion or l for lowercase conversion");
+			char choice = sc.next().charAt(0);
+		
 			String upper, lower, newWord;
-            char choice;
 			newWord = "";
-
-			System.out.print("Please input u for an uppercase conversion or input l for lowercase conversion\n");
-			choice = sc.next().charAt(0);
            		
 			if (choice == 'u')
            	{ 
-			System.out.print("Please enter a lowercase word: ");
-
-			lower = sc.next();
-
-			newWord = utils.toUpper(lower);	
+			newWord = utils.toUpper(input);	
 			}
 
 			else if (choice == 'l')
            	{ 
-			System.out.print("Please enter an uppercase word: ");
-			upper = sc.next();
- 
-			newWord = utils.toLower(upper);
+			newWord = utils.toLower(input);
 			}	
 
 			return newWord;
