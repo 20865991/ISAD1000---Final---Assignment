@@ -2,12 +2,13 @@ import java.util.*;
 
 public class StringConverter
 {
-		public static void main(String[] args)
+		public static String convertString (String input)
 		{
 			Scanner sc = new Scanner(System.in);
 			
-			String upper, lower;
+			String upper, lower, newWord;
             char choice;
+			newWord = "";
 
 			System.out.print("Please input u for an uppercase conversion or input l for lowercase conversion\n");
 			choice = sc.next().charAt(0);
@@ -18,7 +19,7 @@ public class StringConverter
 
 			lower = sc.next();
 
-			String fromLowerCase = utils.toUpper(lower);	
+			newWord = utils.toUpper(lower);	
 			}
 
 			else if (choice == 'l')
@@ -26,9 +27,10 @@ public class StringConverter
 			System.out.print("Please enter an uppercase word: ");
 			upper = sc.next();
  
-			String fromUpperCase = utils.toLower(upper);
-			}
-		
-	}
+			newWord = utils.toLower(upper);
+			}	
+
+			return newWord;
+		}
 
 }
