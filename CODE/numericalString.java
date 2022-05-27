@@ -21,16 +21,4 @@ public class numericalString
         return nString;
     }
 
-    public static void main(String[] args)
-    { 
-        String nString, str;
-
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("PLease enter a string");
-        nString = sc.nextLine();
-
-        str = numericalString.identifyNumbers(nString);
-        
-    }
 }

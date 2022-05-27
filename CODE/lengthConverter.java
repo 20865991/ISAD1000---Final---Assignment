@@ -8,6 +8,8 @@ public class lengthConverter
         double result, meters, feet, cm, inches;
         char choice;
 		result = 0;
+
+		utils.fileRead(pFilename);
                 
         System.out.print("\nPlease enter m for meters conversion from feet OR \nEnter f for feet conversion from meters");
         choice = sc.next().charAt(0);
@@ -28,6 +30,10 @@ public class lengthConverter
 		}
 		return result; 
 	} 
+	public static void main(String[] args)
+	{ 
+		lengthConverter.conversion1("LengthData.txt");
+	}
 
 	public static double conversion2 (String pFilename)
     { 
