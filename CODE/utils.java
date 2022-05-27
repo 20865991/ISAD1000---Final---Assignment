@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 
 public class utils 
 {
-    private static void writeOneRow(String pFilename, int pID, String pName)
+    private static void writeOneRow(String pFilename, double result)
     { 
         FileOutputStream fileStrm = null;
         PrintWriter pw;
@@ -13,7 +13,7 @@ public class utils
         { 
             fileStrm = new FileOutputStream(pFilename);
             pw = new PrintWriter(fileStrm);
-            pw.println(pID + "," + pName);
+            pw.println(result);
             pw.close();  
         }
         catch(IOException e)
@@ -161,4 +161,22 @@ public class utils
 
 		return result; 
 	}
+
+    public static String identifyNumbers (String numID)
+    { 
+        char[] chars = numID.toCharArray();
+        StringBuilder sb = new StringBuilder();
+
+        for(char c : chars)
+        { 
+            if(Character.isDigit(c))
+            { 
+                sb.append(c);
+            }
+        }
+        String nString = sb.toString();
+        System.out.println(sb);
+
+        return nString;
+    }
 }

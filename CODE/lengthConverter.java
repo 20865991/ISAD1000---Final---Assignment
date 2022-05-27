@@ -2,14 +2,14 @@ import java.util.*;
 
 public class lengthConverter 
 {
-    public static double conversions (String pFilename)
+    public static double conversion1 (String pFilename)
     { 
         Scanner sc = new Scanner(System.in);
         double result, meters, feet, cm, inches;
         char choice;
 		result = 0;
                 
-        System.out.print("\nPlease enter m for meters conversion \nEnter f for feet conversion \nEnter i for inches conversion \nEnterc for centimeters conversion");
+        System.out.print("\nPlease enter m for meters conversion from feet OR \nEnter f for feet conversion from meters");
         choice = sc.next().charAt(0);
 
 		if (choice == 'm'||choice == 'M')
@@ -26,6 +26,18 @@ public class lengthConverter
 
 			result = utils.feetConversion(meters);
 		}
+		return result; 
+	} 
+
+	public static double conversion2 (String pFilename)
+    { 
+        Scanner sc = new Scanner(System.in);
+        double result, meters, feet, cm, inches;
+        char choice;
+		result = 0;
+
+		System.out.println("\n PLease enter i for inches conversion from cm OR \nEnter c for centimeters conversion from inches");
+		choice = sc.next().charAt(0);
 
 		if (choice == 'i'||choice == 'I')
 		{
@@ -41,9 +53,7 @@ public class lengthConverter
             inches = sc.nextDouble();
 			
 			result = utils.cmConversion(inches);
-		}
-		
-	sc.close();  
+		} 
 	return result; 
     }  
 }
