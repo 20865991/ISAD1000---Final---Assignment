@@ -1,10 +1,9 @@
 import java.util.*;
 import java.io.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern; 
 
 public class utils 
 {
+    //write submodule
     private static void writeOneRow(String pFilename, double result)
     { 
         FileOutputStream fileStrm = null;
@@ -21,7 +20,7 @@ public class utils
             System.out.println("Error in wroting to file: " + e.getMessage());
         }
     }
-
+    // read submodule
     public static void fileRead(String pFileName)
     { 
         FileInputStream fileStream = null; 
@@ -70,35 +69,6 @@ public class utils
             System.out.print(splitLine[i] + " ");
         }
         System.out.println("");
-    }
-
-    public static String removingNumbers (String str)
-    { 
-        Scanner sc = new Scanner(System.in);
-        
-        char choice;
-        String stringResult = "";
-
-        String regex = "[0-9]";
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(str);
-
-        String newWord = (matcher.replaceAll("")); 
-        
-		System.out.print("Please input u for an uppercase conversion or input l for lowercase conversion\n");
-		choice = sc.next().charAt(0);
-           		
-			if (choice == 'u')
-           	{ 
-			stringResult = utils.toUpper(newWord);
-		   	}
-
-			else if (choice == 'l')
-           	{ 
-			stringResult = utils.toLower(newWord);
-            }     
-
-        return stringResult;   
     }
 
     public static String toUpper(String lower)
@@ -161,22 +131,4 @@ public class utils
 
 		return result; 
 	}
-
-    public static String identifyNumbers (String numID)
-    { 
-        char[] chars = numID.toCharArray();
-        StringBuilder sb = new StringBuilder();
-
-        for(char c : chars)
-        { 
-            if(Character.isDigit(c))
-            { 
-                sb.append(c);
-            }
-        }
-        String nString = sb.toString();
-        System.out.println(sb);
-
-        return nString;
-    }
 }
