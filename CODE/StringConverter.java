@@ -2,26 +2,7 @@ import java.util.*;
 
 public class StringConverter
 {
-	public static String toUpper(String lower)
-	{ 
-		String upperCase;
-
-		upperCase = lower.toUpperCase();
-		System.out.println("The uppercase  conversion is:  " + upperCase);
-
-		return upperCase;
-	}
-
-	public static String toLower(String upper)
-	{ 
-		String lowerCase;
-
-		lowerCase = upper.toLowerCase();
-		System.out.println("The uppercase  conversion is:  " + lowerCase);
-
-		return lowerCase;
-	}
-	public static void main(String[] args)
+		public static void main(String[] args)
 		{
 			Scanner sc = new Scanner(System.in);
 			
@@ -37,7 +18,7 @@ public class StringConverter
 
 			lower = sc.next();
 
-			String fromLowerCase = StringConverter.toUpper(lower);	
+			String fromLowerCase = utils.toUpper(lower);	
 			}
 
 			else if (choice == 'l')
@@ -45,7 +26,7 @@ public class StringConverter
 			System.out.print("Please enter an uppercase word: ");
 			upper = sc.next();
  
-			String fromUpperCase = StringConverter.toLower(upper);
+			String fromUpperCase = utils.toLower(upper);
 			}
 		
 	}
