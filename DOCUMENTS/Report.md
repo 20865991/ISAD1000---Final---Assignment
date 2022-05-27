@@ -7,7 +7,37 @@ Practical class: Thursday/12pm/314.218
 
 ## Introduction
 
+I have choosen to implement the modules listed below:
+1. Convert a given String to upper case or lower case 
+2. Identify whether numeric values are in a given string 
+3. Identify whether a given String is a valid number or not 
+4. Remove any numerica values in a given String and then convert the string to upper or lower case 
+5. Converting a number which represents a length given in meters to feet and vice versa and centimeter to inches and vice versa
+
 ### Module Descriptions
+
+Preliminary description of your modules: 
+
+1.  Converting a given string to upper case or lower case
+		a. This submodule, StringConverter() can use default import parameters or user input. For this specific modules user input will be used. User will be prompted to choose between a lowercase or uppercase conversion. An "IF" statement is used to execute desired code of lowercase or uppercase conversion. User will be prompted to enter a word  User input will be imported as a parameter then the word is converted to desired format. Then the result will be outputted to the terminal.
+
+2. Identify whether numeric values are in a given string 
+
+		a. This submodule, IdentifyNumbers() can use default import parameters or user input. For this specific modules import parameters will be used. The module will import in a string as a parameter and will identify numbers in the string, by placing each character into an array. Then a for loop will check each index value, if it is a number or not and isolate them. The number/s will be returned to main and printed in the terminal. 
+
+3. Identify whether a given string is a valid number or not 
+
+		a. This submodule, StringValidation() can use default import parameters or user input. For this specific modules user input will be used. User will be prompted with a message to enter a string, with our without numbers. It will run through an If statement and print to the terminal the entered input if contains numbers. Does not contain numbers then prints, not a valid numerical string 
+
+4. Remove any numeric values in a given string and then convert the string to upper case or lowercase 
+
+		a. This submodule, removingNumbers() can use default import parameters or user input. For this specific modules import parameters will be used. A string will be imported in containing numbers, the code will remove the numbers. This is done by placing the individual characters and letters into an array and replacing the numeric values with " ". Once the word/string will be converted to lowercase or uppercase. Result will be printed to the terminal. 
+
+5. Converting a number which represents length in meters to feet and vice versa and centimetre to inches and vice versa
+
+		a. This submodule, conversions() will use a read file and write to file method. This will read a file and print results to another file. The conversions are placed in a menu, where the user is prompted to choose the desired conversion, either feet to meters or centimetres to inches.  The results of the conversion is then printed to a new file. 
+
+Revised Module descriptions: 
 
 #### Modularity 
 
@@ -18,6 +48,8 @@ Practical class: Thursday/12pm/314.218
 ###### Test Implementation and execution 
 
 # Version Control 
+
+To start this project by creating a local and remote repository and read over the requirements of assignment. After creating the repositories, I require a minimum of 4 branches for, production code, black box and white box testing then test implementation. These 4 branches is where most of the work will be done as the master branch will hold the final code for each section. I would typically want to try and merge at the end, once all code is finished. I prefer to merge my sub branch with the main branch once all the work has been completed. However all working on one branch at a time.
 
 ## Ethics
 

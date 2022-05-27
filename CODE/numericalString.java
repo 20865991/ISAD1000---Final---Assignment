@@ -6,17 +6,31 @@ public class numericalString
     { 
         char[] chars = numID.toCharArray();
         StringBuilder sb = new StringBuilder();
-
-        for(char c : chars)
-        { 
-            if(Character.isDigit(c))
+    
+            for(char c : chars)
             { 
-                sb.append(c);
+                if(Character.isDigit(c))
+                { 
+                    sb.append(c);
+                }
             }
-        }
+        
         String nString = sb.toString();
         System.out.println(sb);
 
         return nString;
+    }
+
+    public static void main(String[] args)
+    { 
+        String nString, str;
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("PLease enter a string");
+        nString = sc.nextLine();
+
+        str = numericalString.identifyNumbers(nString);
+        
     }
 }
