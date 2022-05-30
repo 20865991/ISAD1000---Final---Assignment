@@ -2,23 +2,30 @@ import java.util.*;
 
 public class StringValidation 
 {
-    public static void main(String[] args)
+    public static boolean isNumeric (String input)
     { 
-        Scanner sc = new Scanner(System.in);
+        boolean numeric = true; 
 
-        String strNum; 
-
-        System.out.print("Please enter a String\n");
-        strNum = sc.nextLine();
-
-        if (strNum == null)
+        try 
         { 
-            System.out.println("This not a numerical string");
+            double num = Double.parseDouble(input);
         }
-        else if (strNum != null)
+        catch(NumberFormatException e)
+        { 
+            numeric = false;
+        }
+
+        if(numeric)
+        { 
+            System.out.println(input + " this is valid");
+        }
+        else 
         {
-            System.out.println("this is a valid numerical string");
+            System.out.println(input + " This is not valid");
         }
-//          
+
+        return numeric;
+
     }
+    
 }

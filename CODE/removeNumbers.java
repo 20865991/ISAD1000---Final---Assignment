@@ -17,17 +17,14 @@ public class removeNumbers
 
         String newWord = (matcher.replaceAll("")); 
         
-		System.out.print("Please input u for an uppercase conversion or input l for lowercase conversion\n");
-		choice = sc.next().charAt(0);
-           		
-			if (choice == 'u')
+            if(newWord.equals(newWord.toLowerCase()))
            	{ 
-			stringResult = utils.toUpper(newWord);
+			stringResult = newWord.toUpperCase();
 		   	}
 
-			else if (choice == 'l')
+            if(newWord.equals(newWord.toUpperCase()))
            	{ 
-			stringResult = utils.toLower(newWord);
+			stringResult = newWord.toLowerCase();
             }     
 
         return stringResult;   

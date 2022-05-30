@@ -38,6 +38,7 @@ public class utils
             line       = bufRdr.readLine();
             while(line != null)
             { 
+                System.out.println("This is a break");
                 lineNum++;
                 processLine(line);
                 line = bufRdr.readLine();
@@ -70,26 +71,6 @@ public class utils
         }
         System.out.println("");
     }
-
-    public static String toUpper(String lower)
-	{ 
-		String upperCase;
-
-		upperCase = lower.toUpperCase();
-		System.out.println("The uppercase  conversion is:  " + upperCase);
-
-		return upperCase;
-	}
-
-	public static String toLower(String upper)
-	{ 
-		String lowerCase;
-
-		lowerCase = upper.toLowerCase();
-		System.out.println("The uppercase  conversion is:  " + lowerCase);
-
-		return lowerCase;
-	}
 
     public static double meterConversion(double feet)
 	{

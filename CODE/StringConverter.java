@@ -1,36 +1,38 @@
 import java.util.*;
+import java.lang.*;
 
 public class StringConverter
 {
 		public static String convertString (String input)
 		{
-			Scanner sc = new Scanner(System.in);
-			
+		
 			String upper, lower, newWord;
-            char choice;
 			newWord = "";
-
-			System.out.print("Please input u for an uppercase conversion or input l for lowercase conversion\n");
-			choice = sc.next().charAt(0);
            		
-			if (choice == 'u')
+			if(input.equals(input.toLowerCase()))
            	{ 
-			System.out.print("Please enter a lowercase word: ");
-
-			lower = sc.next();
-
-			newWord = utils.toUpper(lower);	
+			newWord = input.toUpperCase();
+			System.out.println("The uppercase conversion is: " + newWord);	
 			}
 
-			else if (choice == 'l')
+			else if (input.equals(input.toUpperCase()))
            	{ 
-			System.out.print("Please enter an uppercase word: ");
-			upper = sc.next();
- 
-			newWord = utils.toLower(upper);
+			newWord = input.toLowerCase();
+			System.out.println("The lowercase conversion is: " + newWord);
 			}	
 
 			return newWord;
+		}
+
+		public static void main(String[] args)
+		{ 
+			Scanner sc = new Scanner(System.in);
+			String str; 
+			System.out.println("PLease enter a word");
+			str = sc.next();
+
+			StringConverter.convertString(str);
+			
 		}
 
 }
