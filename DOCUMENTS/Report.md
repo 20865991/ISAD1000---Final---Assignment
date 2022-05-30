@@ -74,10 +74,8 @@ Checklist: **bold text**
 | ----------------------------- | ------ | ------------ | 
 | input is lowercase | "taylor" | "TAYLOR" | 
 | input is uppercase | "TAYLOR" | "taylor" |
-| input contains a lowercase char | "BATMAn" | "batman" | 
-| input contains a lowercase char | "BATMAn" | "BATMAN" | 
-| input contains an uppercase char | "Batman" | "BATMAN" | 
-| input contains an uppercase char | "Batman" | "batman" | 
+| input contains a lowercase char | "BATMAn" | " " |  
+| input contains an uppercase char | "Batman" | " " | 
 | input contains a number | "5991" | " " | 
 
 | removingNumbers() test cases | 
@@ -101,7 +99,19 @@ Black box testing
 
 ###### White-Box test case 
 
+| isNumeric() WB test cases | 
+| Path | Tesst data | expected result |
+| -------------------- | --------- | ----------------- | 
+| Enter try statement | "5991" | "true" | 
+| Enter catch statement | "batman" | "false" |
+| Enter IF statement | "5991" | "input is valid" |
+| Enter ELSE statement | "batman" | "input is invalid" |
 
+| convertString() WB test cases | 
+| Path | test data | expected result |
+| ------------------ | -------- | ------------- | 
+| Enter IF statement | "taylor" | "TAYLOR" | 
+| Enter ELSE IF statement | "TAYLOR" | "taylor" |
 
 ###### Test Implementation and execution 
 
