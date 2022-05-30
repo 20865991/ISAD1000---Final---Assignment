@@ -32,7 +32,8 @@ public class lengthConverter
 	} 
 	public static void main(String[] args)
 	{ 
-		lengthConverter.conversion1("LengthData.txt");
+		
+		utils.fileRead("file01.txt");
 	}
 
 	public static double conversion2 (String pFilename)

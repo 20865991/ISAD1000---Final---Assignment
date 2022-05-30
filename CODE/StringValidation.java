@@ -4,7 +4,6 @@ public class StringValidation
 {
     public static boolean isNumeric (String input)
     { 
-        String string = "woah";
         boolean numeric = true; 
 
         try 

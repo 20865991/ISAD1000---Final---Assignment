@@ -41,6 +41,25 @@ Revised Module descriptions:
 
 #### Modularity 
 
+Checklist: **bold text** 
+	1. Does this method have high coupling? 
+	2. Does this method have low cohesion? 
+	3. Is there any redundant code in the method? 
+	4. Are global variables being used inefficiently? 
+	5. Is a control flag being imported? 
+	6. Does the method accept different data type? 
+	7. Are sequential tasks being used in the method? 
+	8. Does the class/methods have a common task with one another? 
+	9. Are the submodules free of control flags? 
+	10. Is there any repetitive code in the submodules? 
+	11. Are submodules free of differing data imports?
+	12. Are any sequential tasks being used in the submodules?
+	13. Is the program free of global variables? 
+	14. Do submodules return their values instead of storing them in global variable? 
+	15. Are the submodules only performing one task? 
+	16. Can any of the submodules use another method in its submodule?
+
+
 ##### Black-Box test cases 
 
 | isNumeric() test cases | 
@@ -85,6 +104,11 @@ Black box testing
 
 
 ###### Test Implementation and execution 
+
+
+| Modeule name | BB test design(EP) |  BB test (BVP) | WB test design | EP test code (implementation/run) | BVA test code (implementation/run) | White box testing (Implementation/run) |
+| ---------------------------- | ------ | ---------------------- | 
+
 
 # Version Control 
 

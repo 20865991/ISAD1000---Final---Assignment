@@ -5,25 +5,34 @@ public class StringConverter
 {
 		public static String convertString (String input)
 		{
-			Scanner sc = new Scanner(System.in);
-			
-			System.out.println("Please enter u for uppercase conversion or l for lowercase conversion");
-			char choice = sc.next().charAt(0);
 		
 			String upper, lower, newWord;
 			newWord = "";
            		
-			if (choice == 'u')
+			if(input.equals(input.toLowerCase()))
            	{ 
-			newWord = utils.toUpper(input);	
+			newWord = input.toUpperCase();
+			System.out.println("The uppercase conversion is: " + newWord);	
 			}
 
-			else if (choice == 'l')
+			else if (input.equals(input.toUpperCase()))
            	{ 
-			newWord = utils.toLower(input);
+			newWord = input.toLowerCase();
+			System.out.println("The lowercase conversion is: " + newWord);
 			}	
 
 			return newWord;
+		}
+
+		public static void main(String[] args)
+		{ 
+			Scanner sc = new Scanner(System.in);
+			String str; 
+			System.out.println("PLease enter a word");
+			str = sc.next();
+
+			StringConverter.convertString(str);
+			
 		}
 
 }
