@@ -43,7 +43,46 @@ Revised Module descriptions:
 
 ##### Black-Box test cases 
 
+| isNumeric() test cases | 
+| category | test data | expected result |
+| ---------------------------- | ------ | ---------------------- | 
+| input is a string of numbers | "5991" | "true, input is valid" | 
+| input is a string of chars   | "batman" | "false, input is invalid" |
+| input is a combination of string + numbers | "taylor22" | "false, input is invalid" | 
+
+| convertString() test cases | 
+| category | test data | expected result |
+| ----------------------------- | ------ | ------------ | 
+| input is lowercase | "taylor" | "TAYLOR" | 
+| input is uppercase | "TAYLOR" | "taylor" |
+| input contains a lowercase char | "BATMAn" | "batman" | 
+| input contains a lowercase char | "BATMAn" | "BATMAN" | 
+| input contains an uppercase char | "Batman" | "BATMAN" | 
+| input contains an uppercase char | "Batman" | "batman" | 
+| input contains a number | "5991" | " " | 
+
+| removingNumbers() test cases | 
+| category | test data | expected result |
+| ----------------------------- | ------ | ------------ | 
+| str contains a number | "TAY22" | "tay" | 
+| str contains a number | "tay22" | "TAY" | 
+| str contains no numbers | "TAYLOR" | "taylor" | 
+| str only contains numbers | "5991" | " " | 
+| str contains a number | "spiderman3" | "SPIDERMAN" | 
+
+| identifyNumbers() test cases | 
+| category | test data | expected result |
+| ---------------------------- | ------ | ------ | 
+| numID is a string of numbers | "5991" | "5991" | 
+| numID has no numbers | "taylor" | " " | 
+| numID contains a number | "taylor22" | "22" | 
+| numID contains a number | "spiderman3" | "3" | 
+
+Black box testing 
+
 ###### White-Box test case 
+
+
 
 ###### Test Implementation and execution 
 
@@ -68,3 +107,5 @@ b. Using ACS or IEEE-CS Ethical guidelines, give two suggestions to avoid ethica
 To avoid the conflict of interest that can be seen above; personal gain over the safety of the public. In the ACS code of ethics, the first value is primacy of public interest. The developer should be placing the interests above those of personal gain/interests. To combat this the developer may undergo various types of self-reflection and morality reflection. The integrity of the developer and the code have come under question, a lack of professionalism and incompetence, as they have ruined the reputation of the company. Employees could look at and memorise moral exemplars that are made specific to their company, to act in ethically in the eyes of their employer. For example the ACS guidelines hope to improve professionalism, enhancing the integrity of the company. As each person may have their own morals and may justify all their actions as ethical, it becomes essential that things such as the ACS guidelines exist. These are a set of guidelines for the employees to follow. If an employee followed the guidelines it can result professional development, meaning greater professionalism thus working in a way that is ethical. 
 
 ### Discussion
+
+The overall assig
