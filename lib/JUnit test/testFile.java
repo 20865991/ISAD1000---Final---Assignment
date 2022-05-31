@@ -51,6 +51,21 @@ public class testFile
 		assertEquals("Input contains no numbers", "", numericalString.identifyNumbers("taylor"));
 		assertEquals("Input contains a number", "2", numericalString.identifyNumbers("batman2"));
 	}
+
+	@Test 
+	public void testConversion1()
+	{ 
+		assertEquals("file contains data in metres", "222.779", lengthConverter.conversion1("file.txt, 67.9"));
+        assertEquals("file contains data in ft", "30.266", lengthConverter.conversion1("file.txt, 99.3"));
+	}
+
+	@Test 
+	public void testConversion2()
+	{ 
+		assertEquals("file contains data in inches", "177.546", lengthConverter.conversion2("file.txt, 69.9"));
+        assertEquals("file contains data in cm", "17.125", lengthConverter.conversion2("file.txt, 43.5"));
+	}
+
     
 	@Test
 	public void WBtestIsNumeric()
@@ -64,18 +79,7 @@ public class testFile
        assertEquals("Should be valid", "5991",capOut.toString());
     }
 
-	@Test 
-	public void testConversion1()
-	{ 
-
-	}
-
-	@Test 
-	public void testConversion2()
-	{ 
-		
-	}
-
+	
 	@Test
     public void WBtestConvertString()
     { 

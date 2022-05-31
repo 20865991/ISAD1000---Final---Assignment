@@ -14,9 +14,15 @@ I have choosen to implement the modules listed below:
 4. Remove any numerica values in a given String and then convert the string to upper or lower case 
 5. Converting a number which represents a length given in meters to feet and vice versa and centimeter to inches and vice versa
 
+The use of a kanban board in conjuction with a work breakdown structure it made completing this assignment alot easier to read and understand. The completion of small tasks eventually all accumulated and in no time, I had completed the detailed decription section. 
+
+As I was the only person on this project, I firstly understood the requirements of the assessment, and created a plan that would help me design and implement the software and its modules in the easiest way possible.
+
 Througout this assignment, have written production code, created test cases and implemeneted it using JUnit. The production code has been written to be tested using black box testing and choosen submodules, using white box testing. My submodules either read in a file and wrote out to another, or took in import parameters or would take in user input. The first four submodules, I split into two and two. I made two submodules take in user input and the other two submodules take import parameters, being hardcoded in the main. Using the last submodule, I wrote a scenario below, describing the principles of ethics and professionalism. 
 
 ### Module Descriptions
+
+I choose functionality (a) of category 2, as a result of different countries using different measurment systems, imperial and metric. Thus the creation of a software that can flawlessly do that calculation, can improve the efficiency of projects requiring that. 
 
 Preliminary description of your modules: 
 
@@ -58,8 +64,15 @@ Checklist: **bold text**
 	14. Are the submodules only performing one task? 
 	15. Can any of the submodules use another method in its submodule?
 
+I have created a menu that allows the use to test my production code that I have written. The menu consists of options 1-5 and 0 to exit the program. The user will be prompted to choose and option. IF statements are utilised to run desired code based on the choice of the user. For example, if the user choose option 1 then, the test data is batman3, it will then output the just 3 to the terminal. As option 1 of the menu is to identify the numbers. 
+
 I wanted to break up the software into self contained pieces such as methods and functions. Above is a checklist used to improve the modularity of my production code. Looking over my production code following this checklist the issues that I refactored most was redundant code, and should be able to be seen in my gitHub log. However my code in utils.java regarding the calculations, may be seen as redundant code however, I had to make sure that each submodule only did one task. It may be seen that a control flag is used in isNumeric() however this does not create high coupling between two different/random things within the method. It is merely checking the input to print a certain statement. Overall it may be seen as a control flag but it has no negative affect on coupling. 
 
+![image of control flag in code](/Desktop/Pictures/ControlFlag.png)
+
+My submodules, have high cohesion and low coupling as I have split up the software into self contained pieces. Thus high cohesion will lead to greater efficiency in the use of mental resources. I have not used any global variables but have use global constants. This is okay as global constants cannot be changed by a function and will not affect other submodules whereas global variables can be changes by functions and will ultimately affect other submodules. 
+
+My submodules are free of using different types of data, as many would import a string value or read in values from a file all of the same data type.
 
 ##### Black-Box test cases 
 
@@ -109,6 +122,7 @@ I wanted to break up the software into self contained pieces such as methods and
 | file contains data in cm | file.txt, 43.5 | 17.125 | 
  
 
+
 ###### White-Box test case 
 
 | isNumeric() WB test cases | 
@@ -127,6 +141,7 @@ I wanted to break up the software into self contained pieces such as methods and
 
 ###### Test Implementation and execution 
 
+I used JUnit and VScode, to complete this assignment. It allowed for easier testing of my test code. JUnit test code differs from normal test code, as there is a change in syntax and different assertions. For exmaple the use of AssertEquals instead of Assert.equals for java test code. The formation of the code, in java it is the "expected", the method call and test data, then message. Whereas JUnit, for example AssertEquals, message, expected, method call and test data. 
 
 | Modeule name | BB test design(EP) |  BB test (BVP) | WB test design | EP test code (implementation/run) | BVA test code (implementation/run) | White box testing (Implementation/run) |
 | --------------- | ---- | ------------------------------------------------ | ---------------------- | ---- | -------- | ---------------------- | 
@@ -159,4 +174,11 @@ To avoid the conflict of interest that can be seen above; personal gain over the
 
 ### Discussion
 
-The overall assig
+The overall assignment was a time consuming process, from the testing of code and report writing, it took some time to complete this. I believe that my work is simple but efficient it can execute what is needed by the user. The production that I wrote is one of many ways I believe it can be written, but I took a kanban board approach to this assignment. I created my plan of what I needed to do and so on. Much like the lectures, I would only allow three cards per section, however nearing completion I started to have a pile up of tasks in review, as I had not properly error checked them. Once an error chheck was completed, I created a new Kanban board with the bugfixes listed in to do. This made the whole assignmnet more efficient and allowed me to complete the assignmnent in a timely manner. 
+
+The downside of my production code is that the first 4 functionalities take in string inputs, thus I could only use Equivalence partitioning testing and not boundary value analysis. As BVA only can be used when numerical value imports are taken in. That is the shortfall of my assignment. 
+
+I think i could better improve on the production code to be more specific. if I had created a software requirements specification (SRS), it may have helped in narrowing down what the actually production code should be doing and how the user will interact with it. Within this I would of created user stories, identifying what the user could do and what they would gain from it. 
+
+This is a learning experience of how actual projects would happen within a work environment, thus errors and mistakes will be made. But it can be used to improve my project management in the future by utilising the tools that have been equipped with. 
+
