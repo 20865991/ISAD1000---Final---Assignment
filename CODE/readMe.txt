@@ -44,3 +44,5 @@ This is my test implementation of convertString() for blackBox testing without u
 StringValidationTest.java: 
 This is my test implementation of isNumeric() for blackBox testing without using a unit testing framework
 
+testFile.java:
+This file is located in the lib folder that is used for JUnit testing, this file contains al my test files above. However thsi test implementation uses JUnit as the unit testing framework
