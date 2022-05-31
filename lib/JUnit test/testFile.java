@@ -64,6 +64,18 @@ public class testFile
        assertEquals("Should be valid", "5991",capOut.toString());
     }
 
+	@Test 
+	public void testConversion1()
+	{ 
+
+	}
+
+	@Test 
+	public void testConversion2()
+	{ 
+		
+	}
+
 	@Test
     public void WBtestConvertString()
     { 
@@ -74,4 +86,6 @@ public class testFile
 
        assertEquals("Should convert to uppercase ", "The uppercase conversion is: TAYLOR", capOut.toString());
     }
+
+	
 }

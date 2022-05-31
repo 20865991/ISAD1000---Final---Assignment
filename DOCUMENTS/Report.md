@@ -14,6 +14,8 @@ I have choosen to implement the modules listed below:
 4. Remove any numerica values in a given String and then convert the string to upper or lower case 
 5. Converting a number which represents a length given in meters to feet and vice versa and centimeter to inches and vice versa
 
+Througout this assignment, have written production code, created test cases and implemeneted it using JUnit. The production code has been written to be tested using black box testing and choosen submodules, using white box testing. My submodules either read in a file and wrote out to another, or took in import parameters or would take in user input. The first four submodules, I split into two and two. I made two submodules take in user input and the other two submodules take import parameters, being hardcoded in the main. Using the last submodule, I wrote a scenario below, describing the principles of ethics and professionalism. 
+
 ### Module Descriptions
 
 Preliminary description of your modules: 
@@ -35,7 +37,7 @@ Preliminary description of your modules:
 
 5. Converting a number which represents length in meters to feet and vice versa and centimetre to inches and vice versa
 
-		a. This submodule, conversions() will use a read file and write to file method. This will read a file and print results to another file. The conversions are placed in a menu, where the user is prompted to choose the desired conversion, either feet to meters or centimetres to inches.  The results of the conversion is then printed to a new file. 
+		a. This submodule, conversions() will use a read file and write to file method. This will read a file and print results to another file. The conversions are placed in a menu options between m to ft and cm to inches, where the user is prompted to choose the desired conversion, either feet to meters or centimetres to inches.  The results of the conversion is then printed to a new file. 
 
 #### Modularity 
 
@@ -48,16 +50,15 @@ Checklist: **bold text**
 	6. Does the method accept different data type? 
 	7. Are sequential tasks being used in the method? 
 	8. Does the class/methods have a common task with one another? 
-	9. Are the submodules free of control flags? 
-	10. Is there any repetitive code in the submodules? 
-	11. Are submodules free of differing data imports?
-	12. Are any sequential tasks being used in the submodules?
-	13. Is the program free of global variables? 
-	14. Do submodules return their values instead of storing them in global variable? 
-	15. Are the submodules only performing one task? 
-	16. Can any of the submodules use another method in its submodule?
+	9. Is there any repetitive code in the submodules? 
+	10. Are submodules free of differing data imports?
+	11. Are any sequential tasks being used in the submodules?
+	12. Is the program free of global variables? 
+	13. Do submodules return their values instead of storing them in global variable? 
+	14. Are the submodules only performing one task? 
+	15. Can any of the submodules use another method in its submodule?
 
-Above is a checklist used to improve the modularity of my production code. 
+I wanted to break up the software into self contained pieces such as methods and functions. Above is a checklist used to improve the modularity of my production code. Looking over my production code following this checklist the issues that I refactored most was redundant code, and should be able to be seen in my gitHub log. However my code in utils.java regarding the calculations, may be seen as redundant code however, I had to make sure that each submodule only did one task. It may be seen that a control flag is used in isNumeric() however this does not create high coupling between two different/random things within the method. It is merely checking the input to print a certain statement. Overall it may be seen as a control flag but it has no negative affect on coupling. 
 
 
 ##### Black-Box test cases 
@@ -95,7 +96,18 @@ Above is a checklist used to improve the modularity of my production code.
 | numID contains a number | "taylor22" | "22" | 
 | numID contains a number | "spiderman3" | "3" | 
 
-For black 
+| conversion1() test cases | 
+| category | test data | expected result |
+| ---------------------------- | ------ | ------ | 
+| file contains data in metres | file.txt, 67.9 | 222.779 | 
+| file contains data in ft | file.txt, 99.3 | 30.266 | 
+ 
+| conversion2() test cases | 
+| category | test data | expected result |
+| ---------------------------- | ------ | ------ | 
+| file contains data in inches | file.txt, 69.9 | 177.546 | 
+| file contains data in cm | file.txt, 43.5 | 17.125 | 
+ 
 
 ###### White-Box test case 
 
@@ -117,8 +129,13 @@ For black
 
 
 | Modeule name | BB test design(EP) |  BB test (BVP) | WB test design | EP test code (implementation/run) | BVA test code (implementation/run) | White box testing (Implementation/run) |
-| ---------------------------- | ------ | ---------------------- | 
-
+| --------------- | ---- | ------------------------------------------------ | ---------------------- | ---- | -------- | ---------------------- | 
+| isNumeric | done | not done - BVP only applies to numerical imports | done | done | not done | done | 
+| ConvertString | done | not done - BVP only applies to numerical imports | done | done | not done | done | 
+| removingNumbers | done | not done - BVP only applies to numerical imports | not done - not choosen | done | not done | not done - not choosen | 
+| identifyNumbers | done | not done - BVP only applies to numerical imports | not done - not choosen | done | not done | not done - not choosen | 
+| conversion1 | done | not done | not done - not choosen | done | not done | not done - not choosen | 
+| convresion2 | done | not done | not done - not choosen | done | not done | not done - not choosen |
 
 # Version Control 
 

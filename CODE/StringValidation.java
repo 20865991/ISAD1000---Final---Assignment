@@ -17,11 +17,11 @@ public class StringValidation
 
         if(numeric)
         { 
-            System.out.println(input + " this is valid");
+            System.out.println(input);
         }
         else 
         {
-            System.out.println(input + " This is not valid");
+            System.out.println("This is not valid");
         }
 
         return numeric;
