@@ -1,23 +1,34 @@
 import java.util.*;
 import java.io.*;
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+
 
 public class utils 
 {
+    private static final DecimalFormat df = new DecimalFormat("0.000");
     //write submodule
-    private static void writeOneRow(String pFilename, double result)
+    public static void fileWriter(double[] input)
     { 
         FileOutputStream fileStrm = null;
         PrintWriter pw;
         try
         { 
-            fileStrm = new FileOutputStream(pFilename);
+            fileStrm = new FileOutputStream("results.txt");
             pw = new PrintWriter(fileStrm);
-            pw.println(result);
-            pw.close();  
+
+            for(int i = 0; i < input.length; i++)
+            {
+                pw.println("answer is " + df.format(input[i]));
+                 
+            }
+
+            pw.close(); 
         }
         catch(IOException e)
         { 
-            System.out.println("Error in wroting to file: " + e.getMessage());
+            System.out.println("Error in writing to file: " + e.getMessage());
         }
     }
 
@@ -28,7 +39,7 @@ public class utils
 
 		result  = (feet / 3.281);
 
-		System.out.println("The answer is: " +  result  + "m");
+		System.out.println("The answer is: " +  df.format(result)  + "m");
 
 		return result; 
 	}
@@ -38,7 +49,7 @@ public class utils
 		
 		result  = (meters * 3.281);
 	    
-		System.out.println("The answer is: " + result + "ft");
+		System.out.println("The answer is: " + df.format(result) + "ft");
 
 		return result; 
 	}
@@ -48,7 +59,7 @@ public class utils
 
 		result  = (cm / 2.54);
 
-		System.out.println("The answer is: " +  result  + "in");
+		System.out.println("The answer is: " +  df.format(result)  + "in");
 
 		return result; 
 	}
@@ -58,7 +69,7 @@ public class utils
 		
 		result  = (inches  * 3.281);
 	
-		System.out.println("The answer is: " + result  + "cm");
+		System.out.println("The answer is: " + df.format(result)  + "cm");
 
 		return result; 
 	}

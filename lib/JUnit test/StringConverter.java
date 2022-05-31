@@ -12,13 +12,13 @@ public class StringConverter
 			if(input.equals(input.toLowerCase()))
            	{ 
 			newWord = input.toUpperCase();
-			System.out.println("The uppercase conversion is: " + newWord);	
+			System.out.print("The uppercase conversion is: " + newWord);	
 			}
 
 			else if (input.equals(input.toUpperCase()))
            	{ 
 			newWord = input.toLowerCase();
-			System.out.println("The lowercase conversion is: " + newWord);
+			System.out.print("The lowercase conversion is: " + newWord);
 			}	
 
 			return newWord;
