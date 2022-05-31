@@ -78,7 +78,7 @@ public class lengthConverter
 		}
 		return resultArray; 
 	} 
-	public static void main(String[] args)
+	public static void conversionMenu (String pFilename)
 	{ 
 		Scanner sc = new Scanner(System.in);
 		int choice;
