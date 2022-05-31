@@ -24,15 +24,4 @@ public class StringConverter
 			return newWord;
 		}
 
-		public static void main(String[] args)
-		{ 
-			Scanner sc = new Scanner(System.in);
-			String str; 
-			System.out.println("PLease enter a word");
-			str = sc.next();
-
-			StringConverter.convertString(str);
-			
-		}
-
 }

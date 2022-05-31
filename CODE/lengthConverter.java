@@ -1,5 +1,4 @@
 import java.util.*;
-import java.io.*;
 
 public class lengthConverter 
 {
@@ -10,7 +9,7 @@ public class lengthConverter
         char choice;
 		result = 0;
 
-		utils.fileRead(pFilename);
+		fileReader.fileRead("file.txt");
                 
         System.out.print("\nPlease enter m for meters conversion from feet OR \nEnter f for feet conversion from meters");
         choice = sc.next().charAt(0);
@@ -33,11 +32,12 @@ public class lengthConverter
 	} 
 	public static void main(String[] args)
 	{ 
-		
-		utils.fileRead("file01.txt");
+		//System.out.println("are we going in here");
+		//fileReader.fileRead("file.txt");
+		lengthConverter.conversion1("file.txt");
 	}
 
-	public static double conversion2 (String pFilename)
+	/*public static double conversion2 (String pFilename)
     { 
         Scanner sc = new Scanner(System.in);
         double result, meters, feet, cm, inches;
@@ -63,5 +63,5 @@ public class lengthConverter
 			result = utils.cmConversion(inches);
 		} 
 	return result; 
-    }  
+    }  */
 }

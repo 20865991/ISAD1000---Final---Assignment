@@ -16,7 +16,7 @@ public class numericalString
             }
         
         String nString = sb.toString();
-        System.out.println(sb);
+        System.out.println("The number within this string is: " + sb);
 
         return nString;
     }

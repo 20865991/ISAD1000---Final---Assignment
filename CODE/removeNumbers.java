@@ -15,18 +15,20 @@ public class removeNumbers
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(str);
 
-        String newWord = (matcher.replaceAll("")); 
+        str = (matcher.replaceAll("")); 
         
-            if(newWord.equals(newWord.toLowerCase()))
+            if(str.equals(str.toLowerCase()))
            	{ 
-			stringResult = newWord.toUpperCase();
+			stringResult = str.toUpperCase();
 		   	}
 
-            if(newWord.equals(newWord.toUpperCase()))
+            if(str.equals(str.toUpperCase()))
            	{ 
-			stringResult = newWord.toLowerCase();
+			stringResult = str.toLowerCase();
             }     
-
-        return stringResult;   
+            System.out.println("This is the new string without numbers is " + stringResult); 
+        
+            return stringResult;  
+        
     }
 }
