@@ -37,8 +37,6 @@ Preliminary description of your modules:
 
 		a. This submodule, conversions() will use a read file and write to file method. This will read a file and print results to another file. The conversions are placed in a menu, where the user is prompted to choose the desired conversion, either feet to meters or centimetres to inches.  The results of the conversion is then printed to a new file. 
 
-Revised Module descriptions: 
-
 #### Modularity 
 
 Checklist: **bold text** 
@@ -58,6 +56,8 @@ Checklist: **bold text**
 	14. Do submodules return their values instead of storing them in global variable? 
 	15. Are the submodules only performing one task? 
 	16. Can any of the submodules use another method in its submodule?
+
+Above is a checklist used to improve the modularity of my production code. 
 
 
 ##### Black-Box test cases 
@@ -95,7 +95,7 @@ Checklist: **bold text**
 | numID contains a number | "taylor22" | "22" | 
 | numID contains a number | "spiderman3" | "3" | 
 
-Black box testing 
+For black 
 
 ###### White-Box test case 
 
