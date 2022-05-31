@@ -2,33 +2,40 @@ import java.util.*;
 import java.io.*; 
 public class fileReader 
 {
-    public static void fileRead(String pFileName) 
+    public static double[] fileRead(String pFileName) 
     {
         FileInputStream fileStream = null;
         InputStreamReader rdr;
         BufferedReader bufRdr;
-
-        int lineNum = 0; 
+        double[] splitLine = new double[10];
+        int lineLength = splitLine.length;
+        int count = 0; 
         String line;
+
    
         try 
         {
             fileStream = new FileInputStream(pFileName);
             rdr        = new InputStreamReader(fileStream);
             bufRdr     = new BufferedReader(rdr);
-            lineNum    = 0;
-            line       = bufRdr.readLine();
-            line = bufRdr.readLine();
+            count    = 0;
+
+            line  = bufRdr.readLine();
+            splitLine[0] = Double.parseDouble(line);
 
             while(line != null)
             {
-                lineNum++;
-
-
-                line = bufRdr.readLine();
-
+                    count++;
+                
+                    line = bufRdr.readLine();
+                    if(line != null)
+                    {
+                        System.out.println(line);
+                    
+                        splitLine[count] = Double.parseDouble(line);
+                    }
             }
-                fileStream.close();
+              
         
 
         fileStream.close();
@@ -47,6 +54,8 @@ public class fileReader
             }
             System.out.println("Error in fileProcessing: " + errorDetails.getMessage());
         }
+
+        return splitLine;
 
     }
 }
