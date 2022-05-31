@@ -78,6 +78,7 @@ public class lengthConverter
 		}
 		return resultArray; 
 	} 
+	
 	public static void calculations(String pFilename)
 	{ 
 		Scanner sc = new Scanner(System.in);

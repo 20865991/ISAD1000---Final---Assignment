@@ -6,6 +6,7 @@ StudentID: 20865991
 Practical class: Thursday/12pm/314.218
 
 ## Introduction
+When testing this, please go into the folder code to run the code and the JUnit test folder to successfully see that they do work. 
 
 I have choosen to implement the modules listed below:
 1. Convert a given String to upper case or lower case 
@@ -68,7 +69,7 @@ I have created a menu that allows the use to test my production code that I have
 
 I wanted to break up the software into self contained pieces such as methods and functions. Above is a checklist used to improve the modularity of my production code. Looking over my production code following this checklist the issues that I refactored most was redundant code, and should be able to be seen in my gitHub log. However my code in utils.java regarding the calculations, may be seen as redundant code however, I had to make sure that each submodule only did one task. It may be seen that a control flag is used in isNumeric() however this does not create high coupling between two different/random things within the method. It is merely checking the input to print a certain statement. Overall it may be seen as a control flag but it has no negative affect on coupling. 
 
-![image of control flag in code](/Desktop/Pictures/ControlFlag.png)
+![image of control flag in code](/DOCUMENTS/ControlFlag.PNG)
 
 My submodules, have high cohesion and low coupling as I have split up the software into self contained pieces. Thus high cohesion will lead to greater efficiency in the use of mental resources. I have not used any global variables but have use global constants. This is okay as global constants cannot be changed by a function and will not affect other submodules whereas global variables can be changes by functions and will ultimately affect other submodules. 
 
@@ -121,7 +122,7 @@ My submodules are free of using different types of data, as many would import a 
 | file contains data in inches | file.txt, 69.9 | 177.546 | 
 | file contains data in cm | file.txt, 43.5 | 17.125 | 
  
-
+I choose to use test cases as they are good for repeatability and test automation. Testing with automation makes the process easier in terms of repeatability. Black box testing in specific, the use of hard coding, makes the process of testing less painful. Most of my submodules used Equivalence partioning, as the input will test a certain behaviour of the software and the expected result will be compared. Boundary value analysis was not used as my submodules, import strings and not numerical values. 
 
 ###### White-Box test case 
 
@@ -139,9 +140,14 @@ My submodules are free of using different types of data, as many would import a 
 | Enter IF statement | "taylor" | "TAYLOR" | 
 | Enter ELSE IF statement | "TAYLOR" | "taylor" |
 
+I choose the isNumeric() and convertString(), as they take in user input. With whitebox testing I was able to see the production code and make changes if the test was to fail, I would be able to easily rectify the problem. User input would have to go through paths to use the executed code, such as an IF statement or try catch statement. Shown in the test cases above 
+
 ###### Test Implementation and execution 
 
 I used JUnit and VScode, to complete this assignment. It allowed for easier testing of my test code. JUnit test code differs from normal test code, as there is a change in syntax and different assertions. For exmaple the use of AssertEquals instead of Assert.equals for java test code. The formation of the code, in java it is the "expected", the method call and test data, then message. Whereas JUnit, for example AssertEquals, message, expected, method call and test data. 
+
+![comparison of test code without JUnit](/DOCUMENTS/blackboxtestcode.PNG)
+![comparison of test code with JUnit](/DOCUMENTS/JUnitisNumeric.PNG)
 
 | Modeule name | BB test design(EP) |  BB test (BVP) | WB test design | EP test code (implementation/run) | BVA test code (implementation/run) | White box testing (Implementation/run) |
 | --------------- | ---- | ------------------------------------------------ | ---------------------- | ---- | -------- | ---------------------- | 
@@ -155,6 +161,8 @@ I used JUnit and VScode, to complete this assignment. It allowed for easier test
 # Version Control 
 
 To start this project by creating a local and remote repository and read over the requirements of assignment. After creating the repositories, I require a minimum of 4 branches for, production code, black box and white box testing then test implementation. These 4 branches is where most of the work will be done as the master branch will hold the final code for each section. I would typically want to try and merge at the end, once all code is finished. I prefer to merge my sub branch with the main branch once all the work has been completed. However all working on one branch at a time.
+
+![git log excerpt, not the whole log](/DOCUMENTS/gitlogexcerpt.PNG)
 
 ## Ethics
 
